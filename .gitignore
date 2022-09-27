@@ -109,3 +109,4 @@ venv.bak/
 # Intellij
 .idea
 configs/
+.tool-versions
