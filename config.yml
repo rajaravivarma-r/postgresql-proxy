@@ -1,5 +1,6 @@
 plugins:
   - tableau_hll
+  - transparent
 
 settings:
   log-level: debug
@@ -8,7 +9,7 @@ settings:
 
 instances:
   - listen:
-      name: proxy
+      name: local_proxy
       host: 127.0.0.1
       port: 5111
     redirect:
@@ -18,7 +19,7 @@ instances:
     intercept:
       commands:
         queries:
-          - plugin: tableau_hll
+          - plugin: transparent
             function: rewrite_query
         connects:
       responses:
